@@ -9,6 +9,6 @@ npm install
 npm start
 ```
 
-Then open http://localhost:2000/ on your browser and try to upload the file.
+Then open http://localhost:3000/ on your browser and try to upload the file.
 
 Please copy/paste the terminal output in the issue.

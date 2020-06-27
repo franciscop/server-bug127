@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Bug 127</title>
+  </head>
+  <body>
+    <form action="/" method="POST" enctype="multipart/form-data">
+      <input type="text" name="name" required />
+      <input type="file" name="picture" required />
+      <button>Send</button>
+    </form>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"
+      charset="utf-8"
+    ></script>
+    <script>
+      document.querySelector("form").addEventListener("submit", (e) => {
+        e.preventDefault();
+        const datatype = e.target.elements[0].value;
+        const data = e.target.elements[1].files[0];
+
+        console.log(datatype, data);
+
+        const form = new FormData();
+        form.append("datatype", datatype);
+        form.append("data", data);
+        axios.post("/", form, {
+          "content-type": "multipart/form-data",
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "name": "server-bug127",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/franciscop/server-bug127.git"
+  },
+  "keywords": [],
+  "author": "Francisco Presencia <public@francisco.io> (https://francisco.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/franciscop/server-bug127/issues"
+  },
+  "homepage": "https://github.com/franciscop/server-bug127#readme",
+  "dependencies": {
+    "server": "^1.0.29"
+  }
+}
